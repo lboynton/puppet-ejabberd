@@ -1,3 +1,6 @@
 [submodule "modules/epel"]
 	path = modules/epel
 	url = https://github.com/stahnma/puppet-module-epel.git
+[submodule "modules/vcsrepo"]
+	path = modules/vcsrepo
+	url = https://github.com/puppetlabs/puppetlabs-vcsrepo.git

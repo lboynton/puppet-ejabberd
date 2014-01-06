@@ -34,6 +34,7 @@ Vagrant.configure("2") do |config|
   # config.vm.synced_folder "../data", "/vagrant_data"
   config.vm.synced_folder ".", "/srv/puppet/modules/ejabberd"
   config.vm.synced_folder "modules/epel", "/srv/puppet/modules/epel"
+  config.vm.synced_folder "modules/vcsrepo", "/srv/puppet/modules/vcsrepo"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
