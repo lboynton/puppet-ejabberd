@@ -20,7 +20,8 @@ Puppet::Type.type(:ejabberd_user).provide(:ejabberd) do
   end
 
   def password
-    ejabberdctl(['set-password', @resource.value(:name), @resource.value(:host), @resource.value(:password)])
+    ejabberdctl(['change-password', @resource.value(:name), @resource.value(:host), @resource.value(:password)])
+    @resource.value(:password)
   end
 
 end
