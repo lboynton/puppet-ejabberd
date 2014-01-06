@@ -1,4 +1,4 @@
 class ejabberd::params {
-    $package_ensure = latest
+    $package_ensure = installed
     $package_name   = 'ejabberd'
 }
