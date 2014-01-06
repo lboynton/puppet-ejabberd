@@ -1,0 +1,3 @@
+class ejabberd::config{
+
+}
