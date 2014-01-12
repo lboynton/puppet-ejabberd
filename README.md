@@ -1,7 +1,7 @@
 Puppet Ejabberd Module
 =======
 
-This is an ejabberd module for installing and configuring ejabberd. It has been tested on CentOS 6.
+This is an ejabberd module for installing and configuring ejabberd. It has been tested on CentOS 6 with ejabberd 2.1.13.
 
 Usage
 -------
