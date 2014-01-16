@@ -1,5 +1,6 @@
 Puppet Ejabberd Module
 =======
+[![Build Status](https://travis-ci.org/lboynton/puppet-ejabberd.png?branch=master)](https://travis-ci.org/lboynton/puppet-ejabberd)
 
 This is an ejabberd module for installing and configuring ejabberd. It has been tested on CentOS 6 with ejabberd 2.1.13.
 
