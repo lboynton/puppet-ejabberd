@@ -36,9 +36,14 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class ejabberd(
-    $config = $ejabberd::params::config
+    $config         = $ejabberd::params::config,
+    $package_ensure = installed,
+    $package_name   = 'ejabberd'
 ) inherits ejabberd::params {
-    class { '::ejabberd::package': } ->
+    class { '::ejabberd::package':
+        ensure => $package_ensure,
+        package_name => $package_name
+    } ->
     class { '::ejabberd::config':
         config => $config
     } ->
