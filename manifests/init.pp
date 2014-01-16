@@ -33,7 +33,7 @@
 #
 # === Copyright
 #
-# Copyright 2014 Your name here, unless otherwise noted.
+# Copyright 2014 Lee Boynton, unless otherwise noted.
 #
 class ejabberd(
     $config         = $ejabberd::params::config,
