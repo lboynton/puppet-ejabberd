@@ -1,3 +1,5 @@
+.bundle
 .vagrant
 pkg
 spec/fixtures/manifests/site.pp
+vendor
