@@ -36,7 +36,8 @@
 # Copyright 2014 Lee Boynton, unless otherwise noted.
 #
 class ejabberd(
-    $config         = $ejabberd::params::config,
+    $config_content = $ejabberd::params::config_content,
+    $config_source  = $ejabberd::params::config_source,
     $package_ensure = installed,
     $package_name   = 'ejabberd'
 ) inherits ejabberd::params {
@@ -45,7 +46,8 @@ class ejabberd(
         package_name    => $package_name
     } ->
     class { '::ejabberd::config':
-        config => $config
+        config_content  => $config_content,
+        config_source   => $config_source,
     } ~>
     class { '::ejabberd::service': }
 }
