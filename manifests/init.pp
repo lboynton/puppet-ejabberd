@@ -38,8 +38,8 @@
 class ejabberd(
     $config_content = $ejabberd::params::config_content,
     $config_source  = $ejabberd::params::config_source,
-    $package_ensure = installed,
-    $package_name   = 'ejabberd'
+    $package_ensure = $ejabberd::params::package_ensure,
+    $package_name   = $ejabberd::params::package_name
 ) inherits ejabberd::params {
     class { '::ejabberd::package':
         ensure          => $package_ensure,
