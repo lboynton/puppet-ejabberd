@@ -1,5 +1,6 @@
 .bundle
 .vagrant
 pkg
+Gemfile.lock
 spec/fixtures/manifests/site.pp
 vendor
