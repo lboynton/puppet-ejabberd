@@ -46,6 +46,6 @@ class ejabberd(
     } ->
     class { '::ejabberd::config':
         config => $config
-    } ->
+    } ~>
     class { '::ejabberd::service': }
 }

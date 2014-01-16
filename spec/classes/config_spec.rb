@@ -8,7 +8,6 @@ describe 'ejabberd::config' do
         it { should contain_file('/etc/ejabberd/ejabberd.cfg') \
             .with_content("template('ejabberd/ejabberd.cfg.erb')")
         }
-        it { should contain_exec('reload-config') }
     end
 
 end
