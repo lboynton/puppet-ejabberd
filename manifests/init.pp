@@ -35,8 +35,12 @@
 #
 # Copyright 2014 Your name here, unless otherwise noted.
 #
-class ejabberd {
+class ejabberd(
+    $config = $ejabberd::params::config
+) inherits ejabberd::params {
     class { '::ejabberd::package': } ->
-    class { '::ejabberd::config': } ->
+    class { '::ejabberd::config':
+        config => $config
+    } ->
     class { '::ejabberd::service': }
 }

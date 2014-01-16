@@ -1,10 +1,12 @@
-class ejabberd::config {
+class ejabberd::config(
+    $config = $ejabberd::params::config
+) {
     file { '/etc/ejabberd/ejabberd.cfg':
         ensure  => present,
         owner   => 'ejabberd',
         group   => 'ejabberd',
         mode    => '0640',
-        content => template('ejabberd/ejabberd.cfg.erb'),
+        content => $config,
         notify  => Exec['reload-config'],
     }
 
