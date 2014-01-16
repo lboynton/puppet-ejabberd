@@ -37,6 +37,6 @@
 #
 class ejabberd {
     class { '::ejabberd::package': } ->
-    class { '::ejabberd::config': } ~>
+    class { '::ejabberd::config': } ->
     class { '::ejabberd::service': }
 }
