@@ -5,6 +5,7 @@
 - Allow ejabberd config file to be specified
 - Allow package name and package ensure to be specified
 - Some specs added
+- Native erlang MySQL driver added
 
 ## 0.0.1 2014-01-10
 - Initial release

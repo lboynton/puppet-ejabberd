@@ -45,6 +45,7 @@ class ejabberd(
         ensure          => $package_ensure,
         package_name    => $package_name
     } ->
+    class { '::ejabberd::mysql': } ->
     class { '::ejabberd::config':
         config_content  => $config_content,
         config_source   => $config_source,

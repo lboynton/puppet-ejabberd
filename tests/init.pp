@@ -10,5 +10,11 @@
 # http://docs.puppetlabs.com/guides/tests_smoke.html
 #
 
-require epel
-include ejabberd
+class { '::epel': } ->
+class { '::ejabberd': }
+
+ejabberd_user { 'test':
+    ensure      => present,
+    host        => 'localhost',
+    password    => 'test25'
+}
