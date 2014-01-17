@@ -22,10 +22,11 @@ class ejabberd::mysql {
     }
 
     exec { 'compile-mysql':
-        command => '/usr/bin/rebar compile',
-        creates => '/usr/local/src/mysql/ebin/mysql.beam',
-        cwd     => '/usr/local/src/mysql',
-        require => [
+        command     => '/usr/bin/rebar compile',
+        creates     => '/usr/local/src/mysql/ebin/mysql.beam',
+        cwd         => '/usr/local/src/mysql',
+        environment => 'HOME=/root',
+        require     => [
             Package['erlang-rebar'],
             Vcsrepo['/usr/local/src/mysql'],
         ]
