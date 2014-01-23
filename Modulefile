@@ -7,5 +7,4 @@ summary 'Installs and configures ejabberd on CentOS'
 description 'Installs and configures ejabberd on CentOS'
 project_page 'https://github.com/lboynton/puppet-ejabberd'
 
-## Add dependencies, if any:
-# dependency 'username/name', '>= 1.2.0'
+dependency 'puppetlabs/vcsrepo', '0.2.x'
