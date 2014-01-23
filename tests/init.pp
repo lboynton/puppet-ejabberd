@@ -10,7 +10,6 @@
 # http://docs.puppetlabs.com/guides/tests_smoke.html
 #
 
-include epel
 include ::ejabberd
 
 ejabberd_user { 'test':
