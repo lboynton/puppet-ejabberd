@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
   # # }
 
   config.vm.provision :puppet do |puppet|
-    puppet.options = ["--modulepath", "/srv/puppet/modules"]
+    puppet.options = ["--modulepath", "/srv/puppet/modules", "--verbose"]
     puppet.manifests_path = "tests"
     puppet.manifest_file  = "init.pp"
   end
