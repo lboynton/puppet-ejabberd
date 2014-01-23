@@ -36,10 +36,11 @@
 # Copyright 2014 Lee Boynton, unless otherwise noted.
 #
 class ejabberd(
-    $config_content = $ejabberd::params::config_content,
-    $config_source  = $ejabberd::params::config_source,
-    $package_ensure = $ejabberd::params::package_ensure,
-    $package_name   = $ejabberd::params::package_name
+    $config_content     = $ejabberd::params::config_content,
+    $config_source      = $ejabberd::params::config_source,
+    $package_ensure     = $ejabberd::params::package_ensure,
+    $package_name       = $ejabberd::params::package_name,
+    $service_reload     = $ejabberd::params::service_reload,
 ) inherits ejabberd::params {
     class { '::ejabberd::package':
         ensure          => $package_ensure,
@@ -50,5 +51,7 @@ class ejabberd(
         config_content  => $config_content,
         config_source   => $config_source,
     } ~>
-    class { '::ejabberd::service': }
+    class { '::ejabberd::service':
+        service_reload => $service_reload,
+    }
 }
