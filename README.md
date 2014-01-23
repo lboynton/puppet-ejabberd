@@ -7,11 +7,28 @@ This is an ejabberd module for installing and configuring ejabberd. It has been 
 Usage
 -------
 
+Use the defaults:
+
 ```puppet
 include ejabberd
 ```
 
-To create users:
+Or to configure:
+
+```puppet
+class { 'ejabberd':
+    config_source   => 'puppet:///files/my/ejabberd.cfg',
+    package_ensure  => 'installed',
+    package_name    => 'ejabberd',
+}
+```
+
+By default, when the config file changes the ACLs will be reloaded by running `ejabberdctl load_config`. To add new hosts, ejabberd must be restarted manually. For this to work, the mod_admin_extra module must be installed.
+
+Providers
+-------
+
+A provider is available to create users:
 
 ```puppet
 ejabberd_user { 'myusername':
