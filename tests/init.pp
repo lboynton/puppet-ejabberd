@@ -10,8 +10,7 @@
 # http://docs.puppetlabs.com/guides/tests_smoke.html
 #
 
-class { '::epel': } ->
-class { '::ejabberd': }
+include ::ejabberd
 
 ejabberd_user { 'test':
     ensure      => present,

@@ -8,3 +8,4 @@ description 'Installs and configures ejabberd on CentOS'
 project_page 'https://github.com/lboynton/puppet-ejabberd'
 
 dependency 'puppetlabs/vcsrepo', '0.2.x'
+dependency 'stahnma/epel', '0.0.x'

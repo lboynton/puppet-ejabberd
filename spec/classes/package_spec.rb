@@ -13,4 +13,10 @@ describe 'ejabberd::package' do
         end
     end
 
+    context 'with osfamily => RedHat' do
+        let(:facts) { {:osfamily => 'RedHat'} }
+
+        it { should contain_class('epel') }
+    end
+
 end
