@@ -1,12 +1,9 @@
-Puppet Ejabberd Module
-=======
+# Puppet Ejabberd Module
 [![Build Status](https://travis-ci.org/lboynton/puppet-ejabberd.png?branch=master)](https://travis-ci.org/lboynton/puppet-ejabberd)
 
 This is an ejabberd module for installing and configuring ejabberd. It has been tested on CentOS 6 with ejabberd 2.1.13.
 
-Usage
--------
-
+## Usage
 Use the defaults:
 
 ```puppet
@@ -26,8 +23,7 @@ class { 'ejabberd':
 
 By default, when the config file changes the ACLs will be reloaded by running `ejabberdctl load_config`. For this to work, the mod_admin_extra module must be installed. To add new hosts, ejabberd must be restarted manually. Alternatively, you can tell the module to restart ejabberd instead of doing a reload by setting `service_reload => false`.
 
-Defines
--------
+## Defines
 
 ### ejabberd::contrib::module
 
@@ -37,9 +33,7 @@ Installs a module from the contrib repository.
 ejabberd::contrib::module { 'mod_rest': }
 ```
 
-Providers
--------
-
+## Providers
 A provider is available to create users:
 
 ```puppet
@@ -49,8 +43,7 @@ ejabberd_user { 'myusername':
 }
 ```
 
-License
--------
+## License
 Copyright 2014 Lee Boynton
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -66,7 +59,5 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 
-Support
--------
-
+## Support
 Please log tickets and issues on [GitHub](https://github.com/lboynton/puppet-ejabberd/issues)
