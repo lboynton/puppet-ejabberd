@@ -34,7 +34,10 @@ ejabberd::contrib::module { 'mod_rest': }
 ```
 
 ## Providers
-A provider is available to create users:
+
+### ejabberd_user
+
+This provider can be used to create users:
 
 ```puppet
 ejabberd_user { 'myusername':
