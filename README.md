@@ -26,6 +26,17 @@ class { 'ejabberd':
 
 By default, when the config file changes the ACLs will be reloaded by running `ejabberdctl load_config`. For this to work, the mod_admin_extra module must be installed. To add new hosts, ejabberd must be restarted manually. Alternatively, you can tell the module to restart ejabberd instead of doing a reload by setting `service_reload => false`.
 
+Defines
+-------
+
+### ejabberd::contrib::module
+
+Installs a module from the contrib repository.
+
+```puppet
+ejabberd::contrib::module { 'mod_rest': }
+```
+
 Providers
 -------
 
