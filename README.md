@@ -27,7 +27,7 @@ By default, when the config file changes the ACLs will be reloaded by running `e
 
 ### ejabberd::contrib::module
 
-Installs a module from the contrib repository.
+Installs a module from the contrib repository. Note that you will also need to add the module to your ejabberd.cfg config file to enable it.
 
 ```puppet
 ejabberd::contrib::module { 'mod_rest': }
