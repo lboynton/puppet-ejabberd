@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.0.3 2014-xx-xx
+## 0.0.3 2014-01-26
 - ejabberd is now installed from epel on RedHat
 - Added missing vcsrepo dep to modulefile
 - Added service_reload parameter to configure module to either reload or restart ejabberd when config changes
