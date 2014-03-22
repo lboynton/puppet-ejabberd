@@ -12,13 +12,12 @@ Puppet::Type.type(:ejabberd_user).provide(:ejabberd) do
 
   def exists?
     users = ejabberdctl(['registered_users', @resource.value(:host)]).split(/\n/)
-    exists = false
     users.each do |user|
       if user == @resource.value(:name)
-        exists = true
-        return exists
+        return true
       end
     end
+    false
   end
 
   def password
