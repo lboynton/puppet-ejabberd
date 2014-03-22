@@ -1,5 +1,7 @@
 # Installs the native erlang mysql driver
-class ejabberd::mysql {
+class ejabberd::mysql(
+    $lib_dir = $ejabberd::params::lib_dir
+) inherits ejabberd::params {
     if !defined(Package['git']) {
         package { 'git':
             ensure => installed,
@@ -32,22 +34,22 @@ class ejabberd::mysql {
         ]
     }
 
-    file { '/usr/lib64/ejabberd/ebin/mysql.beam':
+    file { "${lib_dir}/ebin/mysql.beam":
         ensure  => present,
         source  => '/usr/local/src/mysql/ebin/mysql.beam',
         require => Exec['compile-mysql'],
     }
-    file { '/usr/lib64/ejabberd/ebin/mysql_auth.beam':
+    file { "${lib_dir}/ebin/mysql_auth.beam":
         ensure  => present,
         source  => '/usr/local/src/mysql/ebin/mysql_auth.beam',
         require => Exec['compile-mysql'],
     }
-    file { '/usr/lib64/ejabberd/ebin/mysql_conn.beam':
+    file { "${lib_dir}/ebin/mysql_conn.beam":
         ensure  => present,
         source  => '/usr/local/src/mysql/ebin/mysql_conn.beam',
         require => Exec['compile-mysql'],
     }
-    file { '/usr/lib64/ejabberd/ebin/mysql_recv.beam':
+    file { "${lib_dir}/ebin/mysql_recv.beam":
         ensure  => present,
         source  => '/usr/local/src/mysql/ebin/mysql_recv.beam',
         require => Exec['compile-mysql'],

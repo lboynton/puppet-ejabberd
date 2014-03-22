@@ -1,4 +1,5 @@
 define ejabberd::contrib::module {
+    include ejabberd::params
     require ejabberd::contrib
     exec { "compile-${name}":
         cwd         => "/usr/local/src/ejabberd-modules/${name}/",
@@ -7,7 +8,7 @@ define ejabberd::contrib::module {
         environment => 'HOME=/root',
         logoutput   => true,
     }
-    file { "/usr/lib64/ejabberd/ebin/${name}.beam":
+    file { "${ejabberd::params::lib_dir}/ebin/${name}.beam":
         ensure  => present,
         source  => "/usr/local/src/ejabberd-modules/${name}/ebin/${name}.beam",
         require => Exec["compile-${name}"],

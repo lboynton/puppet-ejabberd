@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.0.4 2014-xx-xx
+- Fixed path error when installing MySQL driver and contrib modules on 32-bit architectures
+
 ## 0.0.3 2014-01-26
 - ejabberd is now installed from epel on RedHat
 - Added missing vcsrepo dep to modulefile

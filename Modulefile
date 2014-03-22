@@ -1,5 +1,5 @@
 name    'lboynton-ejabberd'
-version '0.0.3'
+version '0.0.4'
 source 'https://github.com/lboynton/puppet-ejabberd'
 author 'lboynton'
 license 'Apache License, Version 2.0'
