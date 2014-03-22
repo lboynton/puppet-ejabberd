@@ -7,6 +7,9 @@ class ejabberd::package(
             include epel
             Class['epel'] -> Package['ejabberd']
         }
+        default: {
+            # by default assume package is in system repos
+        }
     }
     package { 'ejabberd':
         ensure  => $ensure,
