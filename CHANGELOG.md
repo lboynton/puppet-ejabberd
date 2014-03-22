@@ -2,6 +2,7 @@
 
 ## 0.0.4 2014-xx-xx
 - Fixed path error when installing MySQL driver and contrib modules on 32-bit architectures
+- Fixed user already exists error on subsequent puppet runs when more than one ejabberd user has been added (thanks to @michael-leroy)
 
 ## 0.0.3 2014-01-26
 - ejabberd is now installed from epel on RedHat
