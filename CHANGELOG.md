@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.0.4 2014-xx-xx
+## 0.0.4 2014-03-23
 - Fixed path error when installing MySQL driver and contrib modules on 32-bit architectures
 - Fixed user already exists error on subsequent puppet runs when more than one ejabberd user has been added (thanks to @michael-leroy)
 
