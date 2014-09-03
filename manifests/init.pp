@@ -41,10 +41,12 @@ class ejabberd(
     $package_ensure     = $ejabberd::params::package_ensure,
     $package_name       = $ejabberd::params::package_name,
     $service_reload     = $ejabberd::params::service_reload,
+    $include_epel       = $ejabberd::params::include_epel
 ) inherits ejabberd::params {
     class { '::ejabberd::package':
         ensure          => $package_ensure,
-        package_name    => $package_name
+        package_name    => $package_name,
+        include_epel    => $include_epel,
     } ->
     class { '::ejabberd::mysql': } ->
     class { '::ejabberd::config':
