@@ -4,8 +4,10 @@ class ejabberd::package(
 ) inherits ejabberd::params {
     case $::osfamily {
         'RedHat': {
-            include epel
-            Class['epel'] -> Package['ejabberd']
+            if $include_epel == true {
+                include epel
+                Class['epel'] -> Package['ejabberd']
+            }
         }
     }
     package { 'ejabberd':
