@@ -1,6 +1,7 @@
 class ejabberd::package(
     $ensure         = $ejabberd::params::package_ensure,
-    $package_name   = $ejabberd::params::package_name
+    $package_name   = $ejabberd::params::package_name,
+    $include_epel   = $ejabberd::params::include_epel
 ) inherits ejabberd::params {
     case $::osfamily {
         'RedHat': {
