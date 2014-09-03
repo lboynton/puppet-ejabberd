@@ -3,6 +3,6 @@ class ejabberd::params {
     $config_source      = undef
     $package_ensure     = installed
     $package_name       = 'ejabberd'
-    $service_reload     = true,
+    $service_reload     = true
     $include_epel       = true
 }
