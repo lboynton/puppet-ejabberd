@@ -13,4 +13,5 @@ class ejabberd::params {
             $lib_dir = '/usr/lib/ejabberd'
         }
     }
+    $include_epel       = true
 }
