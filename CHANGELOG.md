@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.0.5 2014-09-18
+- Added param $include_epel to disable epel being included. Use this on CentOS if you get the ejabberd package from elsewhere. (thanks to @michael-leroy)
+
 ## 0.0.4 2014-03-23
 - Fixed path error when installing MySQL driver and contrib modules on 32-bit architectures
 - Fixed user already exists error on subsequent puppet runs when more than one ejabberd user has been added (thanks to @michael-leroy)
